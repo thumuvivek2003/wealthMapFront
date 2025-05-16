@@ -4,9 +4,37 @@ import 'leaflet/dist/leaflet.css';
 import Filter from './Filter';
 import Map2 from './Map';
 
+const getRandomPosition = (baseLat, baseLng, range = 0.05) => {
+  const randomLat = baseLat + (Math.random() * 2 - 1) * range;
+  const randomLng = baseLng + (Math.random() * 2 - 1) * range;
+  return [randomLat, randomLng];
+};
+
+
 const Map = () => {
   const position = [51.505, -0.09];
   const [showFilter, setShowFilter] = useState(false);
+  const [locations, setLocations] = useState([]);
+
+  const generateLocations = () => {
+    const baseLat = 51.505;
+    const baseLng = -0.09;
+    const count = 5;
+
+    const newLocations = [];
+    for (let i = 0; i < count; i++) {
+      newLocations.push({
+        id: i + 1,
+        position: getRandomPosition(baseLat, baseLng),
+        name: "Property A",
+      description: "A beautiful place to live.",
+      link: "/property/1",
+      address: "10 Southbank, London SE1 7SG, UK",
+      propertySize: 80,
+      });
+    }
+    setLocations(newLocations);
+  };
 
   return (
     <div className="relative">
@@ -19,6 +47,21 @@ const Map = () => {
           Open Filter
         </button>
       )}
+
+      <button 
+        onClick={generateLocations}
+        className="bg-blue-600 hover:bg-blue-700 text-white hover:text-black border border-gray-300 rounded-full px-5 py-1 text-sm shadow-sm transition-all duration-200"
+      >
+        Generate Random Locations
+      </button>
+
+      {/* <ul>
+        {locations.map(({ id, position }) => (
+          <li key={id}>
+            Location {id}: Latitude {position[0].toFixed(4)}, Longitude {position[1].toFixed(4)}
+          </li>
+        ))}
+      </ul> */}
 
       {/* Filter in Top Left Corner */}
       {showFilter && (
@@ -36,20 +79,7 @@ const Map = () => {
         </div>
       )}
 
-      {/* Map */}
-      {/* <MapContainer center={position} zoom={13} style={{ height: '100vh', width: '100%' }}>
-        <TileLayer
-          attribution='&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={position}>
-          <Popup>
-            asdfasdf
-            <h1>asdfasdf</h1>
-          </Popup>
-        </Marker>
-      </MapContainer> */}
-      <Map2 />
+      <Map2 locations={locations}/>
     </div>
   );
 };

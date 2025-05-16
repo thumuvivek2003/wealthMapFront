@@ -71,9 +71,18 @@ const Filter = () => {
 
 
       {/* Reset Button */}
-      <div className="text-right">
+      <div className="text-right gap-2">
+      <button
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-4 rounded m-2"
+          onClick={() => {
+            setPropertyValue(0);
+            setPropertySize(1);
+          }}
+        >
+          Show
+        </button>
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-4 rounded"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-4 rounded m-2"
           onClick={() => {
             setPropertyValue(0);
             setPropertySize(1);
