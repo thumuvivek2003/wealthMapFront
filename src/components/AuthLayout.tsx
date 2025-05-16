@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AuthLayout = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-wealth-gray-light p-4">
+    <div className="w-full min-h-screen flex items-center justify-center bg-wealth-gray-light p-4">
       <div className="w-full max-w-md">
         <div className="mb-6 text-center">
           <h1 className="text-3xl font-bold text-wealth-blue-dark flex items-center justify-center gap-2">
