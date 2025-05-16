@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Filter from './Filter';
+import Map2 from './Map';
 
 const Map = () => {
   const position = [51.505, -0.09];
@@ -36,7 +37,7 @@ const Map = () => {
       )}
 
       {/* Map */}
-      <MapContainer center={position} zoom={13} style={{ height: '100vh', width: '100%' }}>
+      {/* <MapContainer center={position} zoom={13} style={{ height: '100vh', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -47,7 +48,8 @@ const Map = () => {
             <h1>asdfasdf</h1>
           </Popup>
         </Marker>
-      </MapContainer>
+      </MapContainer> */}
+      <Map2 />
     </div>
   );
 };
