@@ -15,6 +15,10 @@ import PropertyDetails from "./pages/PropertyDetails";
 import NotFound from "./pages/NotFound";
 import AppLayout from "./components/AppLayout";
 import AuthLayout from "./components/AuthLayout";
+import PropertiesList from './pages/MapView/PropertyList.jsx'
+
+import { ApolloProvider } from '@apollo/client';
+import client from './apolloClient.js';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +40,7 @@ const App = () => (
             <Route element={<AppLayout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/map" element={<MapView />} />
+              <Route path="/mapList" element={<PropertiesList />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
             </Route>
             
