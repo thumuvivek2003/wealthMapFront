@@ -48,12 +48,12 @@ const Map = () => {
         </button>
       )}
 
-      <button 
+      {/* <button 
         onClick={generateLocations}
         className="bg-blue-600 hover:bg-blue-700 text-white hover:text-black border border-gray-300 rounded-full px-5 py-1 text-sm shadow-sm transition-all duration-200"
       >
         Generate Random Locations
-      </button>
+      </button> */}
 
       {/* <ul>
         {locations.map(({ id, position }) => (
