@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Filter = () => {
+const Filter = ({ getLocations }) => {
   const [propertyValue, setPropertyValue] = useState(0);
   const [propertySize, setPropertySize] = useState(1);
 
@@ -75,8 +75,7 @@ const Filter = () => {
       <button
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-4 rounded m-2"
           onClick={() => {
-            setPropertyValue(0);
-            setPropertySize(1);
+            getLocations();
           }}
         >
           Show

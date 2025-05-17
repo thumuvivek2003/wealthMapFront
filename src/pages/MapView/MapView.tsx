@@ -67,7 +67,7 @@ const Map = () => {
       {showFilter && (
         <div className="absolute top-4 left-4 z-[1000]">
           <div className="relative">
-            <Filter />
+            <Filter getLocations={generateLocations} />
             <button
               onClick={() => setShowFilter(false)}
               className="absolute -top-2 -right-2 bg-white border border-gray-300 rounded-full w-6 h-6 text-sm text-gray-600 hover:text-black"
