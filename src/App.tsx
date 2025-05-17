@@ -42,6 +42,7 @@ const App = () => (
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/mapList" element={<PropertiesList />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
+              <Route path="/chat" element={<MapView />} />
             </Route>
             
             {/* Catch-all Route */}

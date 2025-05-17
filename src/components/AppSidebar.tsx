@@ -24,6 +24,7 @@ import {
   Settings, 
   Info,
   LogOut,
+  MessageCircle
 } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
@@ -35,6 +36,7 @@ export function AppSidebar() {
     { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { title: "Search", icon: Search, path: "/search" },
     { title: "Reports", icon: FileText, path: "/reports" },
+    { title: "Chat", icon: MessageCircle, path: "/chat" },
   ];
   
   const managementNavItems = [

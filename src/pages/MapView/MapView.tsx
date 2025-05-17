@@ -12,25 +12,25 @@ const getRandomPosition = (baseLat, baseLng, range = 0.05) => {
 
 
 const Map = () => {
-  const position = [51.505, -0.09];
+  const position = [39,-98];
   const [showFilter, setShowFilter] = useState(false);
   const [locations, setLocations] = useState([]);
 
   const generateLocations = () => {
-    const baseLat = 51.505;
-    const baseLng = -0.09;
-    const count = 5;
+    const baseLat = 39.8283;
+    const baseLng = -98.5795;
+    const count = 35;
 
     const newLocations = [];
     for (let i = 0; i < count; i++) {
       newLocations.push({
         id: i + 1,
         position: getRandomPosition(baseLat, baseLng),
-        name: "Property A",
-      description: "A beautiful place to live.",
+        name: "Property A" + i,
+      description: "A beautiful place to live." + 1,
       link: "/property/1",
-      address: "10 Southbank, London SE1 7SG, UK",
-      propertySize: 80,
+      address: "10 Southbank, London SE1 7SG, UK" + 1,
+      propertySize: 80, 
       });
     }
     setLocations(newLocations);
