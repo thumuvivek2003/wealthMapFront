@@ -57,7 +57,7 @@ const Dashboard = () => {
             <span>Filter</span>
           </Button>
           <Button size="sm" asChild>
-            <Link to="/map" className="flex items-center gap-1">
+            <Link to="/" className="flex items-center gap-1">
               <Map className="h-4 w-4" />
               <span>Open Map</span>
             </Link>

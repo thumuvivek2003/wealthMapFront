@@ -31,8 +31,8 @@ export function AppSidebar() {
   const location = useLocation();
   
   const mainNavItems = [
-    { title: "Dashboard", icon: LayoutDashboard, path: "/" },
-    { title: "Map Explorer", icon: Map, path: "/map" },
+    { title: "Map Explorer", icon: Map, path: "/" },
+    { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { title: "Search", icon: Search, path: "/search" },
     { title: "Reports", icon: FileText, path: "/reports" },
   ];
@@ -56,7 +56,6 @@ export function AppSidebar() {
           </svg>
           <span className="font-bold text-lg">Wealth Map</span>
         </div>
-        <SidebarTrigger className="ml-auto" />
       </SidebarHeader>
       
       <SidebarContent>

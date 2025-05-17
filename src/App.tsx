@@ -38,8 +38,8 @@ const App = () => (
             
             {/* App Routes */}
             <Route element={<AppLayout />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/map" element={<MapView />} />
+              <Route path="/" element={<MapView />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/mapList" element={<PropertiesList />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
             </Route>
