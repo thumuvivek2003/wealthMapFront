@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import MapView from "./pages/MapView/MapView";
+import MapChat from "./pages/MapChat/MapView.js";
 import PropertyDetails from "./pages/PropertyDetails";
 import NotFound from "./pages/NotFound";
 import AppLayout from "./components/AppLayout";
@@ -42,7 +43,7 @@ const App = () => (
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/mapList" element={<PropertiesList />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
-              <Route path="/chat" element={<MapView />} />
+              <Route path="/chat" element={<MapChat />} />
             </Route>
             
             {/* Catch-all Route */}
