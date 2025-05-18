@@ -1,8 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import { ApolloProvider } from '@apollo/client';
 import App from './App.tsx';
-import client from './apolloClient'; // your Apollo Client setup file
+import client from './apolloClient';
 import './index.css';
+import 'leaflet/dist/leaflet.css';
 
 const container = document.getElementById('root');
 
