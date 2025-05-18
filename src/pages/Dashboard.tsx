@@ -4,6 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
 import { Link } from "react-router-dom";
 import { Filter, Download, FileText, Map } from "lucide-react";
+import house from '../assets/images/house.jpeg';
+import hous2 from '../assets/images/house2.jpeg';
+import map from '../assets/images/map.jpeg';
+import house3 from '../assets/images/house3.jpeg';
+
 
 const Dashboard = () => {
   // Mock data for charts
@@ -66,41 +71,57 @@ const Dashboard = () => {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Total Properties</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">2,847,392</div>
-            <p className="text-xs text-muted-foreground mt-1">
-              <span className="text-wealth-success">+4.3%</span> from last month
-            </p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Properties Viewed</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">14,589</div>
-            <p className="text-xs text-muted-foreground mt-1">
-              <span className="text-wealth-success">+12.7%</span> from last month
-            </p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Active Users</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">28</div>
-            <p className="text-xs text-muted-foreground mt-1">
-              Across 3 departments
-            </p>
-          </CardContent>
-        </Card>
+      
+      <Card>
+  <CardHeader className="pb-2">
+    <div className="flex items-center justify-between">
+      <CardTitle className="text-sm font-medium text-muted-foreground">
+        Total Properties
+      </CardTitle>
+      <img src={house} alt="Properties" className="w-6 h-6" />
+    </div>
+  </CardHeader>
+  <CardContent>
+    <div className="text-3xl font-bold">2,847,392</div>
+    <p className="text-xs text-muted-foreground mt-1">
+      <span className="text-wealth-success">+4.3%</span> from last month
+    </p>
+  </CardContent>
+</Card>
+
+<Card>
+  <CardHeader className="pb-2">
+    <div className="flex items-center justify-between">
+      <CardTitle className="text-sm font-medium text-muted-foreground">
+        Properties Viewed
+      </CardTitle>
+      <img src={house3} alt="Viewed" className="w-6 h-6" />
+    </div>
+  </CardHeader>
+  <CardContent>
+    <div className="text-3xl font-bold">14,589</div>
+    <p className="text-xs text-muted-foreground mt-1">
+      <span className="text-wealth-success">+12.7%</span> from last month
+    </p>
+  </CardContent>
+</Card>
+
+<Card>
+  <CardHeader className="pb-2">
+    <div className="flex items-center justify-between">
+      <CardTitle className="text-sm font-medium text-muted-foreground">
+        Active Users
+      </CardTitle>
+      <img src={hous2} alt="Users" className="w-6 h-6" />
+    </div>
+  </CardHeader>
+  <CardContent>
+    <div className="text-3xl font-bold">28</div>
+    <p className="text-xs text-muted-foreground mt-1">
+      Across 3 departments
+    </p>
+  </CardContent>
+</Card>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
