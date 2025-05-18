@@ -33,10 +33,10 @@ export function AppSidebar() {
   
   const mainNavItems = [
     { title: "Map Explorer", icon: Map, path: "/" },
+    { title: "Chat", icon: MessageCircle, path: "/chat" },
     { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { title: "Search", icon: Search, path: "/search" },
     { title: "Reports", icon: FileText, path: "/reports" },
-    { title: "Chat", icon: MessageCircle, path: "/chat" },
   ];
   
   const managementNavItems = [

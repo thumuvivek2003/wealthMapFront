@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Chat = ({ generateLocations }) => {
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('Give me houses locations within $400');
 
   const generateResponse = (userMessage) => {
     return `Showing results for : "${userMessage}"`;

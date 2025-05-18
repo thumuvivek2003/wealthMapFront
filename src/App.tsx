@@ -21,10 +21,31 @@ import PropertiesList from './pages/MapView/PropertyList.jsx'
 import { ApolloProvider } from '@apollo/client';
 import client from './apolloClient.js';
 
+
+import Loader from './components/Loader';
+import { useEffect, useState } from "react";
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer); 
+  }, []);
+  
+
+  if (loading) {
+    return (
+      <Loader />
+    );
+  }
+
+
+  return (
+    <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <SidebarProvider>
         <Toaster />
@@ -53,6 +74,7 @@ const App = () => (
       </SidebarProvider>
     </TooltipProvider>
   </QueryClientProvider>
-);
+ );
+};
 
 export default App;
