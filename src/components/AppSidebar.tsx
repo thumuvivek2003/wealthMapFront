@@ -24,7 +24,8 @@ import {
   Settings, 
   Info,
   LogOut,
-  MessageCircle
+  MessageCircle,
+  PieChart
 } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
@@ -37,6 +38,8 @@ export function AppSidebar() {
     { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { title: "Search", icon: Search, path: "/search" },
     { title: "Reports", icon: FileText, path: "/reports" },
+    { title: "Wealth Analytics", icon: PieChart, path: "/analytics" },
+    { title: "Property Search", icon: Search, path: "/propery-search" },
   ];
   
   const managementNavItems = [

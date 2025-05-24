@@ -17,6 +17,8 @@ import NotFound from "./pages/NotFound";
 import AppLayout from "./components/AppLayout";
 import AuthLayout from "./components/AuthLayout";
 import PropertiesList from './pages/MapView/PropertyList.jsx'
+import WealthAnalytics from "./pages/analytics/index.js";
+import PropertySearch from "./pages/propertySearch/index.js";
 
 import { ApolloProvider } from '@apollo/client';
 import client from './apolloClient.js';
@@ -65,6 +67,8 @@ const App = () => {
               <Route path="/mapList" element={<PropertiesList />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
               <Route path="/chat" element={<MapChat />} />
+              <Route path="/analytics" element={<WealthAnalytics />} />
+              <Route path="/propery-search" element={<PropertySearch />} />
             </Route>
             
             {/* Catch-all Route */}
