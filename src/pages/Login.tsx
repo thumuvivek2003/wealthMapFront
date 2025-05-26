@@ -159,7 +159,7 @@ const Login = ({ setIsLoggedIn }) => {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700" disabled={isLoading}>
+            <Button type="submit" onClick={()=>{navigate('/map')}} className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700" disabled={isLoading}>
               <LogIn className="h-4 w-4" />
               {isLoading ? "Signing in..." : "Sign in"}
             </Button>
