@@ -56,9 +56,9 @@ const Landing = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100">
+              {/* <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100">
                 🚀 Now serving 500+ enterprise clients
-              </Badge>
+              </Badge> */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
                 Unlock the Power of{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-slate-800 bg-clip-text text-transparent">Property & Wealth</span>{" "}
@@ -126,7 +126,7 @@ const Landing = () => {
       </section>
 
       {/* Social Proof */}
-      <section className="py-12 bg-slate-100 border-y border-slate-200">
+      {/* <section className="py-12 bg-slate-100 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-slate-500 mb-8">Trusted by leading companies worldwide</p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
@@ -137,7 +137,7 @@ const Landing = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-white">
@@ -257,7 +257,7 @@ const Landing = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
@@ -312,7 +312,7 @@ const Landing = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-slate-50">

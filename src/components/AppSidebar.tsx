@@ -38,7 +38,7 @@ export function AppSidebar() {
     { title: "Chat", icon: MessageCircle, path: "/chat" },
     { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
     { title: "Wealth Analytics", icon: PieChart, path: "/analytics" },
-    { title: "Property Search", icon: Search, path: "/propery-search" },
+    // { title: "Property Search", icon: Search, path: "/propery-search" },
   ];
   
   const managementNavItems = [

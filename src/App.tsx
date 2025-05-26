@@ -5,6 +5,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Users from "./pages/Users/index.js";
+import Help from './pages/Help/';
+import Settings from "./pages/Settings/index.js";
 import { Navigate } from 'react-router-dom';
 
 // Pages
@@ -72,7 +75,9 @@ const App = () => {
               <Route path="/property/:id" element={<PropertyDetails />} />
               <Route path="/chat" element={<MapChat />} />
               <Route path="/analytics" element={<WealthAnalytics />} />
-              <Route path="/propery-search" element={<PropertySearch />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/support" element={<Help />} />
             </Route>
             
             {/* Catch-all Route */}
