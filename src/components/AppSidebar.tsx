@@ -33,11 +33,9 @@ export function AppSidebar() {
   const location = useLocation();
   
   const mainNavItems = [
-    { title: "Map Explorer", icon: Map, path: "/" },
+    { title: "Map Explorer", icon: Map, path: "/map" },
     { title: "Chat", icon: MessageCircle, path: "/chat" },
     { title: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
-    { title: "Search", icon: Search, path: "/search" },
-    { title: "Reports", icon: FileText, path: "/reports" },
     { title: "Wealth Analytics", icon: PieChart, path: "/analytics" },
     { title: "Property Search", icon: Search, path: "/propery-search" },
   ];

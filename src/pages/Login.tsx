@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const Login = () => {
+const Login = ({setIsLoggedIn }) => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -56,7 +56,7 @@ const Login = () => {
         title: `${formData.userType === "admin" ? "Administrator" : "Employee"} login successful`,
         description: `Welcome to Wealth Map ${formData.userType === "admin" ? "(Admin Access)" : ""}`,
       });
-      
+      setIsLoggedIn(true);
       navigate("/");
     }, 1000);
   };

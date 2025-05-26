@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Users, Mail, Shield, CheckCircle, ArrowRight } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
 
-const CompanyRegistration = ({ setIsLoggedIn }) => {
-  const navigate = useNavigate();
+const CompanyRegistration = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     companyName: "",
@@ -294,10 +292,7 @@ const CompanyRegistration = ({ setIsLoggedIn }) => {
 
             {currentStep === 4 && (
               <div className="flex justify-center mt-8">
-                <Button
-                    onClick={() => {setIsLoggedIn(true);navigate('/')}}
-                    className="px-8 bg-blue-600 hover:bg-blue-700 text-lg"
-                  >
+                <Button className="px-8 bg-blue-600 hover:bg-blue-700 text-lg">
                   Access Your Dashboard
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
