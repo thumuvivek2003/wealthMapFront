@@ -20,6 +20,7 @@ import AuthLayout from "./components/AuthLayout";
 import PropertiesList from './pages/MapView/PropertyList.jsx'
 import WealthAnalytics from "./pages/analytics/index.js";
 import PropertySearch from "./pages/propertySearch/index.js";
+import Landing  from "./pages/Land/index.js";
 import { ApolloProvider } from '@apollo/client';
 import client from './apolloClient.js';
 
@@ -62,6 +63,8 @@ const App = () => {
               isLoggedIn ? <Navigate to="/map" replace /> : <Navigate to="/register" replace />
             }
           />
+          
+            <Route path="/land" element={<Landing />} />
             {/* Auth Routes */}
             <Route element={<AuthLayout />}>
               <Route path="/login" element={<Login  setIsLoggedIn={setIsLoggedIn} />} />
