@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Shield, Users, BarChart3, Database, Search, FileText, CheckCircle, Star, ArrowRight, Play } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import MapLogo from '../../assets/images/map.jpeg'
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Landing = () => {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-white" />
+                <img src={MapLogo} alt="Logo" />
               </div>
               <span className="text-xl font-bold text-slate-900">Wealth Map</span>
             </div>
