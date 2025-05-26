@@ -295,7 +295,7 @@ const CompanyRegistration = ({ setIsLoggedIn }) => {
             {currentStep === 4 && (
               <div className="flex justify-center mt-8">
                 <Button
-                    onClick={() => {setIsLoggedIn(true);navigate('/')}}
+                    onClick={() => {setIsLoggedIn(true);navigate('/map')}}
                     className="px-8 bg-blue-600 hover:bg-blue-700 text-lg"
                   >
                   Access Your Dashboard

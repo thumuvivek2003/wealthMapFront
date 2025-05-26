@@ -17,7 +17,7 @@ const Landing = () => {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-white" />
-                <img src={MapLogo} alt="Logo" />
+                <img src={MapLogo} alt="Logo"  className="rounded" />
               </div>
               <span className="text-xl font-bold text-slate-900">Wealth Map</span>
             </div>
@@ -391,7 +391,7 @@ const Landing = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-white" />
+                  <img src={MapLogo} className="rounded"/>
                 </div>
                 <span className="text-xl font-bold">Wealth Map</span>
               </div>

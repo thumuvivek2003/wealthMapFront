@@ -57,14 +57,7 @@ const App = () => {
         <BrowserRouter>
         
           <Routes>
-          <Route
-            path="/"
-            element={
-              isLoggedIn ? <Navigate to="/map" replace /> : <Navigate to="/register" replace />
-            }
-          />
-          
-            <Route path="/land" element={<Landing />} />
+            <Route path="/" element={<Landing />} />
             {/* Auth Routes */}
             <Route element={<AuthLayout />}>
               <Route path="/login" element={<Login  setIsLoggedIn={setIsLoggedIn} />} />
